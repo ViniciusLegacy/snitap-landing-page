@@ -1,0 +1,38 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*Colors*/
+    --text-base: #000000;
+    --highlights: #000000;
+    --bg-color: #FAFAFA;
+
+    --snitap-sun: #FFCD1E;
+    --snitap-sky-mid: #06B6D4;
+    --snitap-sky-light: #67E8F9;
+    --snitap-joy-mid: #DB2777;
+    --snitap-joy-light: #F472B6;
+    --snitap-leaf-mid: #16A34A;
+
+    /*Fonts*/
+    --h1: bold 4rem/1.25 'Syne', sans-serif;
+    --h2: bold 2.5rem/1.2 'Syne', sans-serif;
+
+    --btn-label: 500 1rem/1.5 'Montserrat', sans-serif;
+    --span: 500 .875rem/1.5 'Montserrat', sans-serif;
+}
+
+html, button {
+    font: var(--btn-label);
+}
+
+h1 {
+    font: var(--h1);
+}
+
+h2 {
+    font: var(--h2);
+}
