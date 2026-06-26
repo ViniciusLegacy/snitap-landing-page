@@ -1,6 +1,6 @@
 .banner {
     width: 100%;
-    padding-block: 2.5rem;
+    padding-block: 1.5rem;
     overflow: hidden;
 
     & .scroller {
@@ -34,5 +34,11 @@
 @keyframes bg-gradient {
     50% {
         background-position: 100% 50%;
+    }
+}
+
+@media (width >= 80em) {
+    .banner {
+        padding-block: 2.5rem;
     }
 }

@@ -1,7 +1,7 @@
 section.gallery {
     width: 100%;
     max-width: 80rem;
-    padding: 2.5rem 2rem;
+    padding: 1.5rem;
     margin-inline: auto;
 
     & header {
@@ -10,6 +10,11 @@ section.gallery {
 
     & header span {
         font: var(--span);
+        font-size: .75rem;
+    }
+
+    & header h2 {
+        font-size: 1.5rem;
     }
 
     & img {
@@ -20,11 +25,8 @@ section.gallery {
     & .content {
         margin-top: 2rem;
         display: grid;
-        grid-template-areas:
-        "A B B"
-        "C C D";
 
-        gap: 2.5rem;
+        gap: 1.5rem;
     }
 
     & figure {
@@ -37,12 +39,8 @@ section.gallery {
         animation-timeline: view();
         animation-range: 100px 300px;
 
-        &[data-delay] {
-            animation-range: 150px 350px;
-        }
-
         & > img {
-            height: 25rem;
+            height: 16rem;
             object-fit: cover;
             transition: scale 500ms;
         }
@@ -55,22 +53,6 @@ section.gallery {
             & figcaption {
                 transform: translateY(0);
             }
-        }
-
-        &:nth-child(1) {
-            grid-area: A;
-        }
-
-        &:nth-child(2) {
-            grid-area: B;
-        }
-
-        &:nth-child(3) {
-            grid-area: C;
-        }
-
-        &:nth-child(4) {
-            grid-area: D;
         }
     }
 
@@ -107,5 +89,54 @@ section.gallery {
     from {
         opacity: 0;
         transform: translateY(100%);
+    }
+}
+
+@media (width >= 80em) {
+    section.gallery {
+        padding: 2.5rem 2rem;
+
+        & header span {
+            font: var(--span);
+            font-size: 0.875rem;
+        }
+
+        & header h2 {
+            font-size: 2.5rem;
+        }
+
+        & .content {
+            gap: 2.5rem;
+            grid-template-areas:
+            "A B B"
+            "C C D";
+        }
+
+        & figure {
+
+            &[data-delay] {
+                animation-range: 150px 350px;
+            }
+
+            & > img {
+                height: 25rem;
+            }
+
+            &:nth-child(1) {
+                grid-area: A;
+            }
+
+            &:nth-child(2) {
+                grid-area: B;
+            }
+
+            &:nth-child(3) {
+                grid-area: C;
+            }
+
+            &:nth-child(4) {
+                grid-area: D;
+            }
+        }
     }
 }
